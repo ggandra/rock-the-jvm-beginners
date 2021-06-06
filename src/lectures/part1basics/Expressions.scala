@@ -9,7 +9,7 @@ object Expressions extends App {
   val aCondition = true
   val aConditionedValue = if(!aCondition) 5 else 3
 
-  val aWeirdValue = (aVariable = 3)
+  val aWeirdValue: Unit = (aVariable = 3)
 
   val aCodeBlock = {
     val y = 2
