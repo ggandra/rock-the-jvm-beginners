@@ -122,9 +122,15 @@ object ListTest extends App {
 
   /*println(anotherList.flatMap((elem: Int) => Cons(elem, Cons(elem + 1, Empty))).toString)*/
 
-  anotherList.foreach((elem: Int) => println(elem))
+  anotherList.foreach((elem: Int) => elem * 2)
 
   println(list.sort((x, y) => y - x))
   println(list.zipWith(anotherList, (x, y: Int) => x + y))
   println(anotherList.fold(0)((x, y: Int) => x + y))
+
+  val myListComprehension = for {
+    n <- anotherList
+  } yield  n
+
+  println(myListComprehension)
 }
